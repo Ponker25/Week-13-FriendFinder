@@ -7,15 +7,15 @@ var path = require("path")
 
 module.exports = function (app) {
   app.get('/', function (req, res) {
-
+// home route
     res.sendFile(path.join(__dirname, "../public/home.html"))
   })
-
+//  survey route
   app.get('/survey', function (req, res) {
 
     res.sendFile(path.join(__dirname, "../public/survey.html"))
   })
-  
+// default route
   app.get('*', function (req, res) {
 
     res.sendFile(path.join(__dirname, "../public/home.html"))

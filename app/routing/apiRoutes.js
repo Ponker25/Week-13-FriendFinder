@@ -17,5 +17,27 @@ module.exports = function (app) {
     console.log(req.body);
     console.log("yo");
     res.send(req.body)
+
+    var data = req.body;
+    var scores = data.scores;
+    var difference;
+
+    // loop through all of the friends
+    for (var i = 0; i < friends.length; i++) {
+      var friend = friends[i];
+      difference = 0;
+   
+      console.log(friend.name);
+
+    // loop through all friends scores
+      for (var j = 0; j < friends.scores.length; j++) {
+        var friendScore = friends.scores[j];
+        var scores = friendScore[j]
+
+        console.log(friendScore[j])
+      }
+
+    
+    }
   })
 }
